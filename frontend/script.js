@@ -6,7 +6,6 @@ function appendMessage(role, message) {
   const div = document.createElement("div");
   div.className = role === "You" ? "user-msg" : "bot-msg";
 
-  // Check if message contains code block
   if (message.includes("```")) {
     const parts = message.split("```");
     let html = "";
