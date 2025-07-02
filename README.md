@@ -43,8 +43,7 @@ Chatlyst/
 
 ## 🔗 Live Demo
 
-🌐 [https://your-chatlyst-app.netlify.app](https://chatlyst1.netlify.app/)  
-*(Replace with actual Netlify link when deployed)*
+🌐 [Chatlyst](https://chatlyst1.netlify.app/)  
 
 ---
 
