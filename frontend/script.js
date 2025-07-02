@@ -1,6 +1,8 @@
 const chatBox = document.getElementById("chat-box");
 const input = document.getElementById("user-input");
 const sendButton = document.getElementById("send-btn");
+const micButton = document.getElementById("mic-btn");
+const fileInput = document.getElementById("file-input");
 
 function appendMessage(role, message) {
   const div = document.createElement("div");
@@ -34,18 +36,24 @@ function appendMessage(role, message) {
 
 async function sendMessage() {
   const message = input.value.trim();
-  if (!message) return;
+  const file = fileInput.files[0];
 
-  appendMessage("You", message);
+  if (!message && !file) return;
+
+  if (message) appendMessage("You", message);
+  if (file) appendMessage("You", `📁 Sent file: ${file.name}`);
+
   input.value = "";
+  fileInput.value = "";
+
+  const formData = new FormData();
+  formData.append("message", message);
+  if (file) formData.append("file", file);
 
   try {
     const res = await fetch("https://chatlyst-fyf5.onrender.com/chat", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ message })
+      body: formData,
     });
 
     const data = await res.json();
@@ -57,11 +65,8 @@ async function sendMessage() {
 }
 
 sendButton.addEventListener("click", sendMessage);
-
-input.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    sendMessage();
-  }
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter") sendMessage();
 });
 
 document.addEventListener("click", function (e) {
@@ -69,9 +74,25 @@ document.addEventListener("click", function (e) {
     const code = e.target.closest(".code-block").querySelector("code").innerText;
     navigator.clipboard.writeText(code).then(() => {
       e.target.innerText = "Copied!";
-      setTimeout(() => {
-        e.target.innerText = "Copy";
-      }, 1500);
+      setTimeout(() => (e.target.innerText = "Copy"), 1500);
     });
   }
+});
+
+micButton.addEventListener("click", () => {
+  if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+    alert("Speech Recognition not supported on your browser.");
+    return;
+  }
+
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+
+  recognition.onresult = function (event) {
+    const transcript = event.results[0][0].transcript;
+    input.value += transcript;
+  };
+
+  recognition.start();
 });
