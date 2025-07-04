@@ -27,18 +27,18 @@ It handles real-time user queries and responds intelligently, offering an elegan
 ---
 
 ## 📂 Project Structure
-
-Chatlyst/
-├── backend/
+Chatlyst
+├──backend 
 │   ├── app.py               # FastAPI backend entry point
 │   ├── gemini_service.py    # Gemini API wrapper logic
 │   └── requirements.txt     # Python dependencies
 │
-├── frontend/
+├── frontend
 │   ├── index.html           # Main HTML structure
 │   ├── style.css            # Styling file
 │   ├── script.js            # JavaScript logic
 │   └── favicon.ico          # Site icon
+
 
 ---
 
