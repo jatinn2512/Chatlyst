@@ -66,7 +66,7 @@ GEMINI_API_KEY=your_api_key_here
 ```bash
 uvicorn app:app --reload
 ```
-🌐 This will start the backend at: http://127.0.0.1:8000
+🌐 This will start the backend at: (your loacl server)
 
 💬 4. Open the Frontend
 Open the `index.html` file inside the `frontend` folder in your browser
