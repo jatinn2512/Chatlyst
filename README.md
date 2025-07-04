@@ -1,35 +1,39 @@
-# Chatlyst 🤖
+cat > README.md << 'EOF'
+# 🤖 Chatlyst – Built with FastAPI & Google Gemini API
 
-**Chatlyst** is a modern AI-powered chatbot web application that interacts using natural language, powered by **Google Gemini API**. It features a clean, responsive UI and real-time conversations — designed and built by **Jatin Kumar**.
-
----
-
-## ✨ Features
-
-- 🤖 Gemini API integration for intelligent replies  
-- 💬 Modern, animated chat UI  
-- 💻 Code block rendering with copy buttons  
-- ⚡ Fast and responsive across devices  
-- 🎨 Custom dark theme and smooth UX  
+**Chatlyst** is a modern conversational AI chatbot powered by Google's Gemini API, designed with a responsive chat interface and built using FastAPI.  
+It handles real-time user queries and responds intelligently, offering an elegant UI experience.
 
 ---
 
-## 🛠 Tech Stack
+## 🧠 What This Project Does
 
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: FastAPI (Python)  
-- **LLM**: Google Gemini  
-- **Hosting**: GitHub, Netlify  
+- Takes user input via a web-based chat UI  
+- Sends the message to Gemini API via FastAPI backend  
+- Displays AI-generated response in a styled chat layout  
+- Supports animated messages, code blocks, copy buttons  
+- Clean, responsive, dark-themed interface  
 
 ---
 
-## 📁 Folder Structure
+## 🛠️ Tech Stack
 
-```
+| Layer       | Technologies |
+|-------------|--------------|
+| **Frontend** | HTML, CSS, JavaScript |
+| **Backend**  | FastAPI (Python) |
+| **AI Model** | Gemini 2.5 (via Google Generative AI SDK) |
+| **Hosting**  | Netlify (frontend), Render (backend) |
+
+---
+
+## 📂 Project Structure
+
+\`\`\`
 Chatlyst/
 ├── backend/
-│   ├── app.py
-│   ├── gemini_service.py
+│   ├── app.py               # FastAPI backend routes
+│   ├── gemini_service.py    # Google Gemini API wrapper
 │   └── requirements.txt
 │
 ├── frontend/
@@ -37,13 +41,24 @@ Chatlyst/
 │   ├── style.css
 │   ├── script.js
 │   └── favicon.ico
-```
+\`\`\`
 
 ---
 
 ## 🔗 Live Demo
 
-🌐 [Chatlyst](https://chatlyst1.netlify.app/)  
+🌐 [Chatlyst](https://chatlyst1.netlify.app/)
+
+---
+
+## 🚀 Future Scope
+
+- 🗂 File Upload (PDF, Images, Camera)  
+- 🎤 Voice Input (Speech-to-text)  
+- 🧠 Chat Memory & Context Handling  
+- 🌗 Dark/Light Theme Mode Toggle  
+- 🔐 API Key Encryption  
+- 💬 Personas & Custom Prompts  
 
 ---
 
@@ -51,11 +66,13 @@ Chatlyst/
 
 Made with ❤️ by **Jatin Kumar**  
 📧 jxtron25@gmail.com  
-🌐 [GitHub - @jxtron25](https://github.com/jxtron25)  
-🔗 [LinkedIn - Jatin Kumar](https://www.linkedin.com/in/jatin-kumar-jk2512/)
+🌐 [GitHub](https://github.com/jxtron25)  
+🔗 [LinkedIn](https://www.linkedin.com/in/jatin-kumar-jk2512/)
 
 ---
 
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
+EOF
+
