@@ -18,12 +18,11 @@ It handles real-time user queries and responds intelligently, offering an elegan
 
 ## 🛠️ Tech Stack
 
-| Layer       | Technologies |
-|-------------|--------------|
-| **Frontend** | HTML, CSS, JavaScript |
-| **Backend**  | FastAPI (Python) |
-| **AI Model** | Gemini 2.5 (via Google Generative AI SDK) |
-| **Hosting**  | Netlify (frontend), Render (backend) |
+**Frontend**: HTML, CSS, JavaScript  
+**Backend**: FastAPI (Python)  
+**AI Model**: Gemini 2.5 (via Google Generative AI SDK)  
+**Hosting**: Netlify (frontend), Render (backend)  
+**Tools**: HTTPX, dotenv, VS Code  
 
 ---
 
@@ -75,4 +74,3 @@ Made with ❤️ by **Jatin Kumar**
 
 This project is licensed under the [MIT License](LICENSE).
 EOF
-
