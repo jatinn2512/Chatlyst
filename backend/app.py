@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 model = genai.GenerativeModel("gemini-pro")
@@ -26,6 +26,8 @@ async def chat(request: Request):
     data = await request.json()
     user_input = data.get("message")
 
-    response = model.generate_content(user_input)
-
-    return {"reply": response.text}
+    try:
+        response = model.generate_content(user_input)
+        return {"reply": response.text}
+    except Exception as e:
+        return {"reply": f"❌ Gemini API Error: {str(e)}"}
