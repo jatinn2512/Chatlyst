@@ -24,23 +24,22 @@ It handles real-time user queries and responds intelligently, offering an elegan
 | AI Model     | `Gemini 2.5 (via Google Generative AI SDK)` |
 | Hosting      | `Netlify` (frontend), `Render` (backend)    |
 
----
-
 ## 📂 Project Structure
-Chatlyst
-├──backend 
+
+```
+Chatlyst/
+├── backend/
 │   ├── app.py               # FastAPI backend entry point
-│   ├── gemini_service.py    # Gemini API wrapper logic
+│   ├── gemini_service.py    # Gemini API integration logic
 │   └── requirements.txt     # Python dependencies
 │
-├── frontend
-│   ├── index.html           # Main HTML structure
-│   ├── style.css            # Styling file
-│   ├── script.js            # JavaScript logic
-│   └── favicon.ico          # Site icon
+├── frontend/
+│   ├── index.html           # Main UI layout
+│   ├── style.css            # Custom dark theme styling
+│   ├── script.js            # Chat functionality & animations
+│   └── favicon.ico          # App icon
+```
 
-
----
 
 ## 🔗 Live Demo
 
