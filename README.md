@@ -18,11 +18,14 @@ It handles real-time user queries and responds intelligently, offering an elegan
 
 ## 🛠️ Tech Stack
 
-**Frontend**: HTML, CSS, JavaScript  
-**Backend**: FastAPI (Python)  
-**AI Model**: Gemini 2.5 (via Google Generative AI SDK)  
-**Hosting**: Netlify (frontend), Render (backend)  
-**Tools**: HTTPX, dotenv, VS Code  
+\`\`\`text
+Layer         Technologies
+------------  -------------------------------
+Frontend      HTML, CSS, JavaScript
+Backend       FastAPI (Python)
+AI Model      Gemini 2.5 (via Google Generative AI SDK)
+Hosting       Netlify (frontend), Render (backend)
+\`\`\`
 
 ---
 
