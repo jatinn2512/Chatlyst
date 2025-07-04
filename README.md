@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # 🤖 Chatlyst – Built with FastAPI & Google Gemini API
 
 **Chatlyst** is a modern conversational AI chatbot powered by Google's Gemini API, designed with a responsive chat interface and built using FastAPI.  
@@ -29,7 +28,6 @@ It handles real-time user queries and responds intelligently, offering an elegan
 
 ## 📂 Project Structure
 
-\`\`\`
 Chatlyst/
 ├── backend/
 │   ├── app.py               # FastAPI backend entry point
@@ -41,7 +39,6 @@ Chatlyst/
 │   ├── style.css            # Styling file
 │   ├── script.js            # JavaScript logic
 │   └── favicon.ico          # Site icon
-\`\`\`
 
 ---
 
@@ -74,4 +71,4 @@ Made with ❤️ by **Jatin Kumar**
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
-EOF
+
