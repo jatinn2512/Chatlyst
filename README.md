@@ -47,6 +47,33 @@ Chatlyst/
 
 ---
 
+## 🚀 How to Run the Bot
+
+🧩 1. Install Backend Dependencies  
+Navigate to the `backend` folder and install the required Python packages:
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+▶️ 2. Set Up Your API Key
+Create a .env file inside the backend folder and add your Gemini API key:
+```bash
+GEMINI_API_KEY=your_api_key_here
+```
+▶️ 3. Start the FastAPI Server
+
+```bash
+uvicorn app:app --reload
+```
+🌐 This will start the backend at: http://127.0.0.1:8000
+
+💬 4. Open the Frontend
+Open the `index.html` file inside the `frontend` folder in your browser
+(or use a Live Server extension in VS Code).
+
+That's it — start chatting with Chatlyst! 🤖
+
 ## 🚀 Future Scope
 
 - 🗂 File Upload (PDF, Images, Camera)  
