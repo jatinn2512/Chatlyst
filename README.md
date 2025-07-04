@@ -18,14 +18,12 @@ It handles real-time user queries and responds intelligently, offering an elegan
 
 ## 🛠️ Tech Stack
 
-\`\`\`text
-Layer         Technologies
-------------  -------------------------------
-Frontend      HTML, CSS, JavaScript
-Backend       FastAPI (Python)
-AI Model      Gemini 2.5 (via Google Generative AI SDK)
-Hosting       Netlify (frontend), Render (backend)
-\`\`\`
+| Layer        | Tool / Library                              |
+|--------------|----------------------------------------------|
+| Frontend     | `HTML`, `CSS`, `JavaScript`                 |
+| Backend      | `FastAPI (Python)`                          |
+| AI Model     | `Gemini 2.5 (via Google Generative AI SDK)` |
+| Hosting      | `Netlify` (frontend), `Render` (backend)    |
 
 ---
 
@@ -34,15 +32,15 @@ Hosting       Netlify (frontend), Render (backend)
 \`\`\`
 Chatlyst/
 ├── backend/
-│   ├── app.py               # FastAPI backend routes
-│   ├── gemini_service.py    # Google Gemini API wrapper
-│   └── requirements.txt
+│   ├── app.py               # FastAPI backend entry point
+│   ├── gemini_service.py    # Gemini API wrapper logic
+│   └── requirements.txt     # Python dependencies
 │
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   └── favicon.ico
+│   ├── index.html           # Main HTML structure
+│   ├── style.css            # Styling file
+│   ├── script.js            # JavaScript logic
+│   └── favicon.ico          # Site icon
 \`\`\`
 
 ---
