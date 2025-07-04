@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-import httpx
+import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 
@@ -16,32 +16,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-API_KEY = os.getenv("OPENROUTER_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=GOOGLE_API_KEY)
+
+model = genai.GenerativeModel("gemini-pro")
 
 @app.post("/chat")
 async def chat(request: Request):
     data = await request.json()
     user_input = data.get("message")
 
-    url = "https://openrouter.ai/api/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://chatlyst1.netlify.app/",
-        "X-Title": "Chatlyst by Jatin Kumar"
-    }
+    response = model.generate_content(user_input)
 
-    body = {
-        "model": "mistralai/mistral-7b-instruct",
-        "messages": [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": user_input}
-        ]
-    }
-
-    async with httpx.AsyncClient() as client:
-        response = await client.post(url, headers=headers, json=body)
-        result = response.json()
-
-    reply = result['choices'][0]['message']['content']
-    return {"reply": reply}
+    return {"reply": response.text}
