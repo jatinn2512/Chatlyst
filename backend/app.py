@@ -32,3 +32,7 @@ async def chat(request: Request):
         return {"reply": response.text}
     except Exception as e:
         return {"reply": f"❌ Gemini API Error: {str(e)}"}
+
+@app.get("/")
+def read_root():
+    return {"message": "✅ Chatlyst backend is live!"}

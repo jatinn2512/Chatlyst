@@ -40,7 +40,7 @@ async function sendMessage() {
   input.value = "";
 
   try {
-    const res = await fetch("https://chatlyst-fyf5.onrender.com/chat", {
+    const res = await fetch("https://chatlyst-1826.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
