@@ -19,7 +19,8 @@ app.add_middleware(
 GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
-model = genai.GenerativeModel(model_name="gemini-pro")
+model = genai.GenerativeModel("models/gemini-2.5-pro")
+
 
 @app.post("/chat")
 async def chat(request: Request):
