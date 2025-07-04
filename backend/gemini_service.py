@@ -10,7 +10,8 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("models/gemini-pro")
+
 
 def get_llm_response(message: str) -> str:
     try:
