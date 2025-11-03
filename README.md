@@ -7,11 +7,12 @@ It handles real-time user queries and responds intelligently, offering an elegan
 
 ## 🧠 What This Project Does
 
-- Takes user input via a web-based chat UI  
+- Takes user input via a web-based chat UI (text or voice 🎤)  
 - Sends the message to Gemini API via FastAPI backend  
 - Displays AI-generated response in a styled chat layout  
-- Supports animated messages, code blocks, copy buttons  
+- Supports animated messages, voice input (speech-to-text), code blocks, copy buttons  
 - Clean, responsive, dark-themed interface  
+  
 
 ---
 
@@ -76,8 +77,8 @@ That's it — start chatting with Chatlyst! 🤖
 
 ## 🚀 Future Scope
 
-- 🗂 File Upload (PDF, Images, Camera)  
-- 🎤 Voice Input (Speech-to-text)  
+- 🗂 File Upload (PDF, Images, Camera) 
+- 🎤 Improved Voice Input (multi-language speech-to-text)  
 - 🧠 Chat Memory & Context Handling  
 - 🌗 Dark/Light Theme Mode Toggle  
 - 🔐 API Key Encryption  
