@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Chatlyst 🤖</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>Chatlyst 🤖</header>
-
-  <div class="chat-container">
-    <div class="chat-box" id="chat-box">
-      <div><b>Bot:</b> Hello! How can I help you?</div>
+  <div class="bg-hero">
+    <div class="hero-inner">
+      <div class="hero-title">🤖 Chatlyst</div>
+      <div class="hero-sub">..your personal AI chatmate — text or use voice!!</div>
     </div>
   </div>
 
-  <div class="input-area">
-    <input type="text" id="user-input" placeholder="Type your message..." />
-    <button id="send-btn">➤</button>
+  <main class="app">
+    <section class="chat-area">
+      <div id="chat-box" class="chat-box" aria-live="polite">
+        <div class="bot-message bubble">
+          <div class="message-content">Hello! I'm Chatlyst — how can I help you today?</div>
+          <div class="meta">Bot • <span class="time">now</span></div>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <form id="input-form" class="input-area" autocomplete="off">
+      <div class="left-controls">
+        <!-- <label for="file-input" class="file-label" title="Attach file">📎</label> -->
+        <input id="file-input" type="file" accept="image/*,video/*,.pdf,.txt" />
+      </div>
 
-  <footer>
+      <div class="composer">
+        <textarea id="user-input" placeholder="Type a message or speak (press mic)..." rows="1"></textarea>
+        <div id="attachment-preview" class="attachment-preview"></div>
+      </div>
+
+      <div class="right-controls">
+        <button type="button" id="mic-btn" class="mic-btn" title="Start/Stop voice input">🎤</button>
+        <button type="submit" id="send-btn" class="send-btn" title="Send">➤</button>
+      </div>
+    </form>
+  </main>
+
+  <div class="bg-footer">
     Made with ❤️ by Jatin Kumar
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
